@@ -8,6 +8,7 @@
 #include <albert/standarditem.h>
 using namespace albert;
 using namespace std;
+using namespace util;
 
 Plugin::Plugin()
 {
