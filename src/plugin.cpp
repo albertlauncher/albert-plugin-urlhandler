@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QUrl>
-#include <albert/albert.h>
+#include <albert/systemutil.h>
 #include <albert/standarditem.h>
 using namespace Qt::StringLiterals;
 using namespace albert::util;
