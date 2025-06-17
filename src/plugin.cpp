@@ -1,4 +1,4 @@
-// Copyright (c) 2022-2024 Manuel Schneider
+// Copyright (c) 2022-2025 Manuel Schneider
 
 #include "plugin.h"
 #include <QFile>
@@ -49,12 +49,7 @@ vector<RankItem> Plugin::handleGlobalQuery(const Query &query)
                 tr("Open URL in browser"),
                 tr("Open %1").arg(url.authority()),
                 {u"xdg:www"_s, u"xdg:web-browser"_s, u"xdg:emblem-web"_s, u":default"_s},
-                {
-                    {
-                        u"open_url"_s, tr("Open URL"),
-                        [url](){ open(url); }
-                    }
-                }
+                {{u"open_url"_s, tr("Open URL"), [url](){ open(url); }}}
             ),
             1.0f
         );
