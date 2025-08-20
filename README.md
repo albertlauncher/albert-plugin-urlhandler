@@ -1,1 +1,1 @@
-# albert-plugin-urlhandler
+# Albert plugin: URL Handler
