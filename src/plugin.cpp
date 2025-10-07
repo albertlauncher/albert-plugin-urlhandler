@@ -4,8 +4,9 @@
 #include <QFile>
 #include <QTextStream>
 #include <QUrl>
-#include <albert/systemutil.h>
+#include <albert/iconutil.h>
 #include <albert/standarditem.h>
+#include <albert/systemutil.h>
 using namespace Qt::StringLiterals;
 using namespace albert::util;
 using namespace albert;
@@ -48,7 +49,7 @@ vector<RankItem> Plugin::handleGlobalQuery(const Query &query)
                 u"url_hanlder"_s,
                 tr("Open URL in browser"),
                 tr("Open %1").arg(url.authority()),
-                {u"xdg:www"_s, u"xdg:web-browser"_s, u"xdg:emblem-web"_s, u":default"_s},
+                []{ return makeImageIcon(u":default"_s); },
                 {{u"open_url"_s, tr("Open URL"), [url](){ open(url); }}}
             ),
             1.0f
