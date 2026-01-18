@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QUrl>
-#include <albert/iconutil.h>
+#include <albert/icon.h>
 #include <albert/standarditem.h>
 #include <albert/systemutil.h>
 using namespace Qt::StringLiterals;
@@ -48,7 +48,7 @@ vector<RankItem> Plugin::rankItems(QueryContext &ctx)
                 u"url_hanlder"_s,
                 tr("Open URL in browser"),
                 tr("Open %1").arg(url.authority()),
-                []{ return makeImageIcon(u":default"_s); },
+                []{ return Icon::image(u":default"_s); },
                 {{u"open_url"_s, tr("Open URL"), [url](){ open(url); }}}
             ),
             1.0f
