@@ -49,7 +49,8 @@ vector<RankItem> Plugin::rankItems(QueryContext &ctx)
                 tr("Open URL in browser"),
                 tr("Open %1").arg(url.authority()),
                 []{ return Icon::image(u":default"_s); },
-                {{u"open_url"_s, tr("Open URL"), [url](){ open(url); }}}
+                {{u"open_url"_s, tr("Open URL"), [url](){ open(url); }}},
+                u""_s
             ),
             1.0f
         );
