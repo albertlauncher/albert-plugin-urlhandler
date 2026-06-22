@@ -20,7 +20,7 @@ Plugin::Plugin()
     std::sort(valid_tlds.begin(), valid_tlds.end());
 }
 
-vector<RankItem> Plugin::rankItems(QueryContext &ctx)
+vector<RankItem> Plugin::rankItems(QueryContext ctx)
 {
     vector<RankItem> results;
     auto trimmed = ctx.query().trimmed();

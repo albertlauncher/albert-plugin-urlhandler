@@ -12,7 +12,7 @@ class Plugin : public albert::ExtensionPlugin,
 public:
 
     Plugin();
-    std::vector<albert::RankItem> rankItems(albert::QueryContext &) override;
+    std::vector<albert::RankItem> rankItems(albert::QueryContext) override;
 
 private:
 
